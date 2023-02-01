@@ -1,0 +1,30 @@
+@import '../../common/styles/templates';
+@import '../../common/styles/variables';
+
+.form {
+  @extend %form;
+}
+
+.wrapperInput {
+  @extend %wrapperInput;
+}
+
+.input {
+  @extend %input;
+}
+
+.inputValid{
+  @extend %inputValid;
+}
+
+.inputInvalid{
+  @extend %inputInvalid;
+}
+
+.error {
+  @extend %error;
+}
+
+.btn{
+  @extend %btn;
+}

@@ -1,11 +1,37 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { AiOutlineDelete } from 'react-icons/ai';
+import { deleteTodo } from '../../store/slices/todoListSlice';
+import styles from './Todo.module.scss';
 
-const Todo = () => {
+const {
+  list,
+  todoStyle,
+  icons,
+} = styles;
+
+const Todo = ({ todoList, remove }) => {
   return (
-    <div>
-      Todo
-    </div>
+    <ul className={list}>
+      {todoList.map(todo => (
+        <li key={todo.id} className={todoStyle}>
+          <p>{JSON.stringify(todo.todo)}</p>
+          <button 
+            onClick={() => remove(todo.id)} 
+            className={icons}
+          >
+            <AiOutlineDelete/>
+          </button>
+        </li>
+      ))}
+    </ul>
   );
 }
 
-export default Todo;
+const mapStateToProps = ({todoListState}) => todoListState;
+
+const mapDispatchToProps = (dispath) => ({
+  remove: id => dispath(deleteTodo(id)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Todo);

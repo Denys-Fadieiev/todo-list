@@ -1,10 +1,11 @@
 import React from 'react';
 
-const TodoHead = () => {
+const TodoHead = (props) => {
+  const { styles } = props;
   return (
-    <div>
+    <h1 className={styles.title}>
       TodoHead
-    </div>
+    </h1>
   );
 }
 

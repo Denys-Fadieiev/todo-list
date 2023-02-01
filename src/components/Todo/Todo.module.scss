@@ -1,0 +1,49 @@
+@import '../../common/styles/templates';
+@import '../../common/styles/variables';
+
+.list{
+  width: 100%;
+  padding: 10px 30px;
+  text-align: center;
+}
+
+.todoStyle{
+  @extend %flex-jc-sb;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 25px;
+  background: green;
+  border-radius: 6px;
+  background: $purple-bg-lg;
+
+  overflow: hidden;
+}
+
+.todoStyle:nth-child(4n + 1) {
+  background: $blue-bg-lg;
+}
+
+.todoStyle:nth-child(4n + 2) {
+  background: $yellow-bg-lg;
+}
+
+.todoStyle:nth-child(4n + 3) {
+  background: $pink-bg-lg;
+}
+
+.todoStyle:nth-child(4n + 4) {
+  background: $purple-bg-lg;
+}
+
+.todoStyle:nth-child(4n + 5) {
+  background: $orange-bg-lg;
+}
+
+.icons{
+  // width: 40px;
+  // height: 40px;
+  border: none;
+  background: transparent;
+  color: $white-color;
+  font-size: 20px;
+}

@@ -1,0 +1,100 @@
+@import './variables';
+
+%flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+%flex-col-jcs {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+%flex-jc-sb {
+  display: flex;
+  justify-content: space-between;
+}
+
+%flex-col-aic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+%form {
+  @extend %flex;
+  width: 100%;
+  padding: 30px 50px;
+  @media screen and (max-width: 693px) {
+    padding: 20px 40px;
+  }
+}
+
+%wrapperInput {
+  position: relative;
+  width: 75%;
+  // padding-bottom: 15px;
+  @media screen and (max-width: 693px) {
+    width: 100%;
+  }
+}
+
+%input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 25px;
+  border: 3px solid $input-valid-col;
+  outline: none;
+  background: transparent;
+  border-radius: 6px 0 0 6px;
+  color: $white-color;
+  outline: none;
+  @media screen and (max-width: 693px) {
+    padding: 15px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+}
+
+%inputValid{
+  border: 3px solid $input-valid-col;
+}
+
+%inputInvalid{
+  @media screen and (max-width: 693px) {
+    border: 3px solid $red-color;
+  }
+}
+
+%btn {
+  width: 25%;
+  margin-bottom: 15px;
+  padding: 2px;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+  outline: none;
+  background: $purple-bg-lg;
+  color: $white-color;
+  font-weight: bold;
+  text-transform: capitalize;
+  @media screen and (max-width: 693px) {
+    width: 100%;
+    padding: 15px;
+    font-size: 14px;
+  }
+}
+
+%error {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  width: 100%;
+  margin: 5px 0px;
+  border-radius: 4px;
+  color: $red-color;
+  font-size: 10px;
+  text-align: center;
+  font-weight: bold;
+}
